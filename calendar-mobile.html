@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario TN2G</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="swiper myCarousel">
+      <div class="swiper-wrapper"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.slim.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const giorniPerMese = {
+          1: 31, // Gennaio
+          2: 28, // Febbraio (2026 non è bisestile)
+          3: 31,
+          4: 30,
+          5: 31,
+          6: 30,
+          7: 31,
+          8: 31,
+          9: 30,
+          10: 31,
+          11: 30,
+          12: 31,
+        };
+
+        const dictMesi = {
+          1: "gen",
+          2: "feb",
+          3: "mar",
+          4: "apr",
+          5: "mag",
+          6: "giu",
+          7: "lug",
+          8: "ago",
+          9: "set",
+          10: "ott",
+          11: "nov",
+          12: "dic",
+        };
+
+        const nomiMesi = {
+          1: "Gennaio",
+          2: "Febbraio",
+          3: "Marzo",
+          4: "Aprile",
+          5: "Maggio",
+          6: "Giugno",
+          7: "Luglio",
+          8: "Agosto",
+          9: "Settembre",
+          10: "Ottobre",
+          11: "Novembre",
+          12: "Dicembre",
+        };
+
+        const compleanni = {
+          // Array per ogni mese dei compleanni
+          1: [
+            { day: 1, name: "Mario", eta: 25 },
+            { day: 1, name: "Luigi", eta: 30 },
+          ],
+          2: [],
+          3: [],
+          4: [],
+          5: [],
+          6: [],
+          7: [],
+          8: [],
+          9: [],
+          10: [],
+          11: [],
+          12: [],
+        };
+
+        const oroscopo = {
+          1: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          2: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          3: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          4: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          5: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          6: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          7: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          8: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          9: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          10: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          11: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+          12: [
+            {
+              title: "Ariete",
+              content: "Il segno zodiacale dell'energia e dell'iniziativa.",
+            },
+            {
+              title: "Toro",
+              content:
+                "Il segno zodiacale della stabilità e della determinazione.",
+            },
+          ],
+        };
+
+        function generaSlide() {
+          for (let month = 1; month <= 12; month++) {
+            const slideHtml = `
+              <div class="swiper-slide slide${month}">
+                <div class="overlay"></div>
+                <div class="container position-relative">
+                  <div class="row my-3">
+                    <div class="col-3">'26</div>
+                    <div class="col-6 text-center">
+                      <h2>${nomiMesi[month]}</h2>
+                    </div>
+                    <div class="col-3 text-end logo"></div>
+                  </div>
+                  <div class="row content-calendar">
+                    <div class="col-12">
+                      <div class="calendar calendar_${dictMesi[month]}"></div>
+                    </div>
+                  </div>
+                  <div class="row border border-dark p-3 oroscopo text-center">
+                    <div class="col-12">
+                      <h3 class="title text-uppercase">L'oroscopo di Diana Onirisis</h3>
+                      <div class="oroscopo-content">
+                        <div class="col-12 col-md-6">
+                          <h4>${oroscopo[month][0]["title"]}</h4>
+                          <p>${oroscopo[month][0]["content"]}</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <h4>${oroscopo[month][1]["title"]}</h4>
+                          <p>${oroscopo[month][1]["content"]}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+            $(".swiper-wrapper").append(slideHtml);
+          }
+        }
+
+        function generaGriglia() {
+          for (let month = 1; month <= 12; month++) {
+            // Per ogni mese
+            var calendario = $(".calendar_" + dictMesi[month]);
+            var swiper = $(".slide" + month);
+            swiper.css(
+              "background",
+              "url('img/bgs/" +
+                month +
+                ".jpg') center center / cover no-repeat",
+            );
+            calendario.empty();
+
+            const totaleCelle = 35; // 5 righe * 7 colonne
+            const giorni = giorniPerMese[month]; // Giorni nel mese
+
+            for (let giorno = 1; giorno <= totaleCelle; giorno++) {
+              // ciclo per ogni giorno e creo box con contenuto
+
+              let compleanniGiorno = compleanni[month].filter(
+                (c) => c.day === giorno,
+              );
+              if (giorno <= giorni) {
+                // Giorno <= 31, 30 o 28
+                calendario.append(`
+                    <div class="day position-relative">
+                        <div class='day-number position-absolute top-0 end-0 me-2 mt-1'>${giorno}</div>
+                        <div class="day-content d-flex  w-100 h-100 align-items-center justify-content-center">
+                            ${compleanniGiorno.map((c) => `<div class="d-flex flex-column align-items-center mx-2"><span class="celebrated-name">${c.name}</span> <span class="age">(${c.eta})</span></div>`).join("⋄")}
+                        </div>
+                    </div>
+                `);
+              } else {
+                calendario.append(`
+                    <div class="day empty"></div>
+                `);
+              }
+            }
+
+            // Intestazione
+            $.each(giorni, function (_, giorno) {
+              calendario.append(`<div class="day-name">${giorno}</div>`);
+            });
+          }
+        }
+
+        generaSlide();
+        generaGriglia();
+
+        const swiper = new Swiper(".swiper", {
+          // Optional parameters
+          direction: "horizontal",
+          loop: false,
+
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: ".swiper-scrollbar",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

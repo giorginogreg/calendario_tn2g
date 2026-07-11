@@ -1,0 +1,36 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 120px);
+  gap: 8px;
+}
+
+.day-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.day {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 50px;
+  background: #fff;
+}
+
+.logo {
+  background: url("./img/Logo_TN2G.png") no-repeat right center;
+  background-size: contain;
+}
+
+.content-calendar {
+  margin-bottom: 100px;
+}
+
+.oroscopo {
+  background-color: #f5f5f5;
+}
