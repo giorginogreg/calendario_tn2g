@@ -23,14 +23,24 @@
 }
 
 .logo {
-  background: url("./img/Logo_TN2G.png") no-repeat right center;
   background-size: contain;
+  width: 100px;
 }
 
-.content-calendar {
+.content-calendar,
+.oroscopo {
   margin-bottom: 100px;
 }
 
-.oroscopo {
+.header {
+  height: 100px;
+}
+
+.oroscopo,
+.month-name {
   background-color: #f5f5f5;
+}
+
+.oroscopo-text {
+  text-align: justify;
 }
