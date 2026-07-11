@@ -1,8 +1,57 @@
+@font-face {
+  font-family: "Tenor Sans";
+  src: url("fonts/Tenor_Sans/TenorSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Icon";
+  src:
+    url("fonts/New Icon Font/Webfont/NewIconSerif-Regular.woff2")
+      format("woff2"),
+    url("fonts/New Icon Font/Webfont/NewIconSerif-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Questrial";
+  src: url("fonts/Questrial/Questrial-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 120px);
   gap: 8px;
+}
+
+.year {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 3em;
+}
+
+.month-name,
+.oroscopo .title {
+  font-family: "New Icon", serif;
+  font-size: 4em;
+}
+
+.oroscopo .title {
+  font-size: 2.5em;
+}
+
+.day-content {
+  font-family: "New Icon", serif;
+  font-size: 1.5em;
+}
+
+.oroscopo-text,
+.oroscopo-title {
+  font-family: "Questrial", sans-serif;
 }
 
 .day-name {
