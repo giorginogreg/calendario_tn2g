@@ -24,8 +24,15 @@
 
 .calendar {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 120px);
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+}
+
+.calendar .day {
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
 }
 
 .year {
@@ -33,6 +40,7 @@
   font-size: 4em;
   /* transform: scaleY(2); */
 }
+
 @media (max-width: 767.98px) {
   .year {
     transform: scaleY(1);
@@ -152,15 +160,24 @@
 .celebrated-name {
   margin-top: 20px;
 }
+
 @media (max-width: 767.98px) {
   .age,
   .celebrated-name {
-    font-size: 0.6em;
+    font-size: 0.55em;
+  }
+
+  .age.long-name,
+  .celebrated-name.long-name {
+    font-size: 0.4em;
+  }
+  .age.very-long-name,
+  .celebrated-name.very-long-name {
+    font-size: 0.3em;
   }
 }
 
 .day {
-  border: 1px solid #444;
   padding: 10px;
   min-height: 50px;
   min-width: 50px;
