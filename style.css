@@ -30,8 +30,8 @@
 
 .year {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 2.5em;
-  transform: scaleY(2);
+  font-size: 4em;
+  /* transform: scaleY(2); */
 }
 @media (max-width: 767.98px) {
   .year {
@@ -42,7 +42,7 @@
 .month-name,
 .oroscopo .title {
   font-family: "New Icon", serif;
-  font-size: 4em;
+  font-size: 4.5em;
 }
 
 @media (max-width: 767.98px) {
@@ -51,8 +51,79 @@
   }
 }
 
+.oroscopo-content-r {
+  border-left: 2px solid #ccc;
+}
+
+.slide2 .month-name,
+.slide2 .day,
+.slide2 .oroscopo {
+  background-color: #ffe6e6;
+}
+
+.slide3 .month-name,
+.slide3 .day,
+.slide3 .oroscopo {
+  background-color: #efe0ff;
+}
+
+.slide4 .month-name,
+.slide4 .day,
+.slide4 .oroscopo {
+  background-color: #fffceb;
+}
+
+.slide5 .month-name,
+.slide5 .day,
+.slide5 .oroscopo {
+  background-color: #e4ffd8;
+}
+
+.slide6 .month-name,
+.slide6 .day,
+.slide6 .oroscopo {
+  background-color: #e1ecff;
+}
+
+.slide7 .month-name,
+.slide7 .day,
+.slide7 .oroscopo {
+  background-color: #fff0f0;
+}
+
+.slide8 .month-name,
+.slide8 .day,
+.slide8 .oroscopo {
+  background-color: #ffc5c2;
+}
+
+.slide9 .month-name,
+.slide9 .day,
+.slide9 .oroscopo {
+  background-color: #ffd3ae;
+}
+
+.slide10 .month-name,
+.slide10 .day,
+.slide10 .oroscopo {
+  background-color: #ffc398;
+}
+
+.slide11 .month-name,
+.slide11 .day,
+.slide11 .oroscopo {
+  background-color: #ebbca0;
+}
+
+.slide12 .month-name,
+.slide12 .day,
+.slide12 .oroscopo {
+  background-color: #a3bda6;
+}
+
 .oroscopo .title {
   font-size: 2.5em;
+  transform: scaleY(1.5);
 }
 
 .day-content {
