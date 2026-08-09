@@ -44,7 +44,7 @@
 
 .year {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 4em;
+  font-size: 2.5em;
   /* transform: scaleY(2); */
 }
 
@@ -200,7 +200,7 @@
 .logo {
   background-size: contain;
   width: 100%;
-  max-width: 100px;
+  max-width: 50px;
 }
 
 .content-calendar,
