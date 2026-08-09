@@ -30,6 +30,13 @@
   border-left: 1px solid #aaa;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .calendar .day {
   border-bottom: 1px solid #aaa;
   border-right: 1px solid #aaa;
