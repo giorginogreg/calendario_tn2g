@@ -92,9 +92,7 @@
             { day: 25, name: "Arianna R.", eta: 20 },
             { day: 17, name: "Saba", eta: 24 },
           ],
-          2: [
-            
-          ],
+          2: [],
           3: [
             {
               day: 13,
@@ -107,19 +105,19 @@
               eta: 24,
             },
             {
-              "day": 27,
-              "name": "Gloria Costa",
-              "eta": 36
+              day: 27,
+              name: "Gloria Costa",
+              eta: 36,
             },
             {
-              "day": 26,
-              "name": "Nicole Agnolo",
-              "eta": 27
+              day: 26,
+              name: "Nicole Agnolo",
+              eta: 27,
             },
-             {
-              "day": 28,
-              "name": "Frasca",
-              "eta": 26
+            {
+              day: 28,
+              name: "Frasca",
+              eta: 26,
             },
             {
               day: 29,
@@ -133,7 +131,7 @@
               name: "Andrea",
               eta: 27,
             },
-            
+
             {
               day: 18,
               name: "Tudor",
@@ -151,16 +149,16 @@
               name: "Josuè",
               eta: 23,
             },
-            
+
             {
               day: 15,
               name: "Margherita",
               eta: 25,
             },
             {
-              "day": 17,
-              "name": "Mattia Maldotti",
-              "eta": 18
+              day: 17,
+              name: "Mattia Maldotti",
+              eta: 18,
             },
             {
               day: 5,
@@ -195,7 +193,6 @@
               eta: 25,
             },
 
-
             {
               day: 13,
               name: "Luciano",
@@ -206,20 +203,19 @@
               name: "Kirill",
               eta: 28,
             },
-          
+
             {
               day: 29,
               name: "Michele",
               eta: 30,
             },
-            
           ],
           7: [
             {
-            "day": 9,
-            "name": "Eugenio Zoppe'",
-            "eta": 22
-          },
+              day: 9,
+              name: "Eugenio Zoppe'",
+              eta: 22,
+            },
             {
               day: 11,
               name: "Pedra",
@@ -231,10 +227,10 @@
               eta: 36,
             },
             {
-              "day": 18,
-              "name": "Natanaele",
-              "eta": 27
-            }
+              day: 18,
+              name: "Natanaele",
+              eta: 27,
+            },
           ],
           8: [
             {
@@ -257,10 +253,10 @@
               name: "Cristian",
               eta: 26,
             },
-             {
-              "day": 29,
-              "name": "Roberta Manzella",
-              "eta": 21
+            {
+              day: 29,
+              name: "Roberta Manzella",
+              eta: 21,
             },
           ],
           9: [
@@ -288,7 +284,7 @@
               day: 21,
               name: "Elisa",
               eta: 27,
-            }
+            },
           ],
           10: [
             {
@@ -340,11 +336,11 @@
               name: "Gloria",
               eta: 23,
             },
-              {
-                  "day": 1,
-                  "name": "Alessia D'Oronzo",
-                  "eta": 24
-                },
+            {
+              day: 1,
+              name: "Alessia D'Oronzo",
+              eta: 24,
+            },
           ],
           12: [
             {
@@ -626,7 +622,7 @@
                 calendario.append(`
                                             <div class="day position-relative${currentDayClass}">
                                                 <div class='day-number position-absolute top-0 end-0 '>${giorno}</div>
-                                                <div class="day-content d-flex  w-100 h-100 align-items-center justify-content-center">
+                                                <div class="day-content d-flex flex-column w-100 h-100 align-items-center justify-content-center">
                             ${compleanniGiorno
                               .map(
                                 (c) => `
